@@ -1,16 +1,18 @@
 import axios from 'axios';
 import { langColors } from './config';
 
+// Defina a URL base diretamente no código
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_BASE_URL,
+  baseURL: 'https://api.github.com', // URL da API GitHub
 });
 
+// Função para obter informações do usuário
 export const getUser = async (login) => api.get(`/users/${login}`);
 
+// Função para obter repositórios do usuário
 export const getRepos = async (login) => api.get(`/users/${login}/repos`);
 
-export default api;
-
+// Função para obter estatísticas das linguagens de programação
 export const getLangsFrom = (repositories) => {
   let stats = repositories
     .map((repository) => repository.language)
@@ -34,3 +36,5 @@ export const getLangsFrom = (repositories) => {
 
   return stats;
 };
+
+export default api;
