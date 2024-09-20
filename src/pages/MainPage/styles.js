@@ -38,7 +38,7 @@ export const Input = styled.input`
   margin-right: 24px;
   padding: 0 24px;
 
-  &::placehoder {
+  &::placeholder {
     color: ${(props) => props.theme.colors.metalDark};
   }
 `;
@@ -57,4 +57,15 @@ export const Button = styled(Link)`
   &:hover {
     background: ${(props) => props.theme.colors.container};
   }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+`;
+
+export const ErrorMessage = styled.p`
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
 `;
