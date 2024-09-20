@@ -1,5 +1,5 @@
 {
-  "name": "api-github-dev",
+  "name": "github-profile-explorer",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
