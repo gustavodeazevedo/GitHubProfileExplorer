@@ -5,6 +5,27 @@ export const Loading = styled.div`
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+
+  &:before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    background-color: #3498db;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 `;
 
 export const Container = styled.main`

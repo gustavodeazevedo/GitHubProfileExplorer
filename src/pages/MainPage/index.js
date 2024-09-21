@@ -34,7 +34,7 @@ const MainPage = () => {
           <MdSearch size={42} />
         </Button>
       </Form>
-      {error && <ErrorMessage>{error}</ErrorMessage>}
+      {error && <ErrorMessage>{error}</ErrorMessage>} {/* Exibe mensagem de erro */}
     </Container>
   );
 };
